@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .nav a:hover {
+    color: #c69c33; /* Color dorado para resaltar */
+  }
+  
+  .languages {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .languages img {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+  }
+  
