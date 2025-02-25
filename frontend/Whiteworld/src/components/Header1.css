@@ -1,0 +1,135 @@
+/* General Header Style */
+.site-header {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    padding-top: 0;
+    overflow: hidden; /* Evita que cualquier contenido exceda la altura de la pantalla */
+  }
+  
+  .site-branding {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .wp-custom-header {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Asegura que el header ocupe toda la altura disponible */
+    overflow: hidden;
+  }
+  
+  .logo-branding {
+    position: absolute; /* Coloca el logo de manera absoluta dentro de wp-custom-header */
+    left: 0; /* El logo estará alineado completamente a la izquierda */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    z-index: 20; /* Asegura que el logo esté encima de la imagen de fondo */
+  }
+  
+  .custom-logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .wp-custom-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el área completa sin distorsionar */
+  }
+  
+  .site-branding-text {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .site-title a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .site-description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Menu Icon */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+  
+  /* Navigation */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .nav a:hover {
+    color: #c69c33;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top: 70px; /* Ajuste para que el menú no se solape con el header */
+      left: 0;
+    }
+  
+    .nav.active {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .site-title a {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto del título para dispositivos pequeños */
+    }
+  
+    .site-description {
+      font-size: 0.9rem;
+    }
+  
+    .wp-custom-header {
+      height: 250px; /* Reduce la altura en pantallas pequeñas */
+    }
+  }
+  
